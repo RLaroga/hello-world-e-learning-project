@@ -8,7 +8,7 @@
         <result property="password" column="password" />
         <result property="courseLevel" column="course_level" />
         <result property="quizLevel" column="quiz_level" />
-        <result property="createTime" column="create_time" />
+        <result property="createdTime" column="create_time" />
         <result property="updateTime" column="update_time" />
     </resultMap>
 

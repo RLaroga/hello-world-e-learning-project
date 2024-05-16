@@ -25,7 +25,7 @@ public class User {
 
     private Integer quizLevel;
 
-    private LocalDateTime createTime;
+    private LocalDateTime createdTime;
 
     private LocalDateTime updateTime;
 
