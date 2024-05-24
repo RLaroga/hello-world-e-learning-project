@@ -1,13 +1,10 @@
 package com.helloWorld.helloWorld.response;
 
-import com.github.pagehelper.PageInfo;
-import com.helloWorld.helloWorld.common.StringUtils;
+import com.helloWorld.helloWorld.common.utils.StringUtils;
 import com.helloWorld.helloWorld.common.constant.HttpStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor

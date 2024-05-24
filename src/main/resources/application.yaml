@@ -3,5 +3,5 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/hello_world_app?serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true&failOverReadOnly=false
     username: root
-    password: "!HELLOWORLd!0950"
+    password: '!HELLOWORLd!0950'
     driver-class-name: com.mysql.cj.jdbc.Driver

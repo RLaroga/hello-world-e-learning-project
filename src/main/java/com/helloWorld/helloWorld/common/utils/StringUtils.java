@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.common;
+package com.helloWorld.helloWorld.common.utils;
 
 import java.util.Collection;
 import java.util.Map;

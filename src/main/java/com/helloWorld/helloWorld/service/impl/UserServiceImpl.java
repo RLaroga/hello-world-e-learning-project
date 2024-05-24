@@ -5,7 +5,6 @@ import com.helloWorld.helloWorld.entity.User;
 import com.helloWorld.helloWorld.mapper.UserMapper;
 import com.helloWorld.helloWorld.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private final UserMapper userMapper;
 
     @Override
-    public List<User> selectUserList(User user) {
-        return this.userMapper.selectUserList(user);
+    public List<User> selectUserList() {
+        return this.userMapper.selectUserList();
     }
 }

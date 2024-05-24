@@ -19,17 +19,21 @@ public class UserController {
 
     private final UserService userService;
 
+//    @GetMapping("/list")
+//    public ResponseBase<List<User>> list() {
+//        List<User> userList = userService.selectUserList();
+//
+//        ResponseBase<List<User>> responseData = ResponseBase.ok();
+//        if ( userList == null ) {
+//            return responseData;
+//        }
+//        responseData.setData( userList );
+//        responseData.setTotal( new PageInfo<>( userList ).getTotal() );
+//        return responseData;
+//    }
+
     @GetMapping("/list")
-    public ResponseBase<List<User>> list(User user) {
-        List<User> userList = userService.selectUserList(user);
-
-        ResponseBase<List<User>> responseData = ResponseBase.ok();
-        if ( userList == null ) {
-            return responseData;
-        }
-        responseData.setData( userList );
-        responseData.setTotal( new PageInfo<>( userList ).getTotal() );
-        return responseData;
+    public String list(User user) {
+        return "HELLO";
     }
-
 }
