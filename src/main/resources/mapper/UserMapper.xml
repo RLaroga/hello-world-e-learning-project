@@ -25,7 +25,7 @@
         from user
     </sql>
 
-    <select id="selectUserList" resultType="com.helloWorld.helloWorld.entity.User">
+    <select id="selectUserList" resultMap="UserResult">
         <include refid="selectUserVo"/>
     </select>
 
