@@ -17,6 +17,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public List<User> selectUserList() {
-        return this.userMapper.selectUserList();
+
+        System.out.println("USER SERVICE IMPL");
+
+        return userMapper.selectUserList();
     }
 }

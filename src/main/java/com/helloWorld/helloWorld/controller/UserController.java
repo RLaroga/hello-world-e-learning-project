@@ -19,21 +19,20 @@ public class UserController {
 
     private final UserService userService;
 
-//    @GetMapping("/list")
-//    public ResponseBase<List<User>> list() {
-//        List<User> userList = userService.selectUserList();
-//
-//        ResponseBase<List<User>> responseData = ResponseBase.ok();
-//        if ( userList == null ) {
-//            return responseData;
-//        }
-//        responseData.setData( userList );
-//        responseData.setTotal( new PageInfo<>( userList ).getTotal() );
-//        return responseData;
-//    }
-
     @GetMapping("/list")
-    public String list(User user) {
-        return "HELLO";
+    public ResponseBase<List<User>> list() {
+        System.out.println("Before mapper! ");
+        List<User> userList = userService.selectUserList();
+
+        ResponseBase<List<User>> responseData = ResponseBase.ok();
+        if ( userList == null ) {
+            System.out.println("User List is Null");
+            return responseData;
+        }
+
+        System.out.println("User List is Not Null");
+        responseData.setData( userList );
+        responseData.setTotal( new PageInfo<>( userList ).getTotal() );
+        return responseData;
     }
 }
