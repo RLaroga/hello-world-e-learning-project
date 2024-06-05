@@ -5,6 +5,7 @@
         <result property="id" column="id" />
         <result property="firstName" column="first_name" />
         <result property="lastName" column="last_name" />
+        <result property="username" column="username" />
         <result property="password" column="password" />
         <result property="courseLevel" column="course_level" />
         <result property="quizLevel" column="quiz_level" />
@@ -17,6 +18,7 @@
             id,
             first_name,
             last_name,
+            username,
             password,
             course_level,
             quiz_level,
