@@ -6,7 +6,9 @@ import com.helloWorld.helloWorld.mapper.UserMapper;
 import com.helloWorld.helloWorld.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,5 +23,23 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         System.out.println("USER SERVICE IMPL");
 
         return userMapper.selectUserList();
+    }
+
+
+    @Override
+    public String saveUser(User user) {
+        User userExist = this.getUserByUsername( user.getUsername());
+        if ( null != userExist ) {
+            return "Username already exists";
+        }
+//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(SecurityConstant.PASSWORD_STRENGTH);
+//        user.setPassword(encoder.encode(user.getPassword()));
+        user.setCreatedTime(LocalDateTime.now());
+        baseMapper.insert(user);
+        return "Registration Successful";
+    }
+
+    public User getUserByUsername(String username) {
+        return userMapper.findByUsername(username);
     }
 }
