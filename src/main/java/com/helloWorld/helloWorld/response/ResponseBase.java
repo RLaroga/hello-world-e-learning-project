@@ -42,11 +42,17 @@ public class ResponseBase<T> {
             this.data = data;
         }
     }
-    public static <T> ResponseBase<T> ok( final String msg ) {
-        return new ResponseBase<>( HttpStatus.SUCCESS, msg );
+
+    public static <T> ResponseBase<T> ok(final String msg) {
+        return new ResponseBase<>(HttpStatus.SUCCESS, msg);
     }
+
+    public static <T> ResponseBase<T> error(String msg) {
+        return new ResponseBase<>(HttpStatus.BAD_REQUEST, msg, null);
+    }
+
     public static <T> ResponseBase<T> ok() {
-        return ResponseBase.ok( "Success" );
+        return ResponseBase.ok("Success");
     }
 
 }
