@@ -10,7 +10,7 @@
         <result property="courseLevel" column="course_level" />
         <result property="quizLevel" column="quiz_level" />
         <result property="createdTime" column="create_time" />
-        <result property="updateTime" column="update_time" />
+        <result property="updatedTime" column="update_time" />
     </resultMap>
 
     <sql id="selectUserVo">
@@ -30,5 +30,22 @@
     <select id="selectUserList" resultMap="UserResult">
         <include refid="selectUserVo"/>
     </select>
+
+    <select id="findByUsername" resultType="com.helloWorld.helloWorld.entity.User">
+        <include refid="selectUserVo"/>
+        <where>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+        </where>
+    </select>
+
+    <insert id="insert">
+        insert into User (id, first_name, last_name, username,
+                          password, course_level, quiz_level, created_time, updated_time)
+        values (#{user.id}, #{user.firstName}, #{user.lastName}, #{user.username},
+                #{user.password}, #{user.courseLevel}, #{user.quizLevel}, #{user.createdTime}, #{user.updatedTime})
+    </insert>
+
 
 </mapper>
