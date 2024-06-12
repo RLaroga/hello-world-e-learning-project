@@ -1,7 +1,7 @@
-package com.helloWorld.helloWorld.mapper;
+package com.helloWorld.helloWorld.mappers;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.helloWorld.helloWorld.entity.User;
+import com.helloWorld.helloWorld.entities.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

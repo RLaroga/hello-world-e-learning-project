@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.admin.security.annotation;
+package com.helloWorld.helloWorld.common.annotation;
 
 
 import java.lang.annotation.*;

@@ -1,9 +1,9 @@
-package com.helloWorld.helloWorld.controller;
+package com.helloWorld.helloWorld.controllers;
 
 import com.github.pagehelper.PageInfo;
-import com.helloWorld.helloWorld.entity.User;
-import com.helloWorld.helloWorld.response.ResponseBase;
-import com.helloWorld.helloWorld.service.UserService;
+import com.helloWorld.helloWorld.entities.User;
+import com.helloWorld.helloWorld.responses.ResponseBase;
+import com.helloWorld.helloWorld.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

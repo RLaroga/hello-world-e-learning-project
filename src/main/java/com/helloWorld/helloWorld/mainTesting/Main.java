@@ -1,10 +1,8 @@
-package com.helloWorld.helloWorld.main;
+package com.helloWorld.helloWorld.mainTesting;
 
 import com.helloWorld.helloWorld.config.Parrot;
 import com.helloWorld.helloWorld.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.awt.*;
 
 public class Main {
     public static void main(String [] args) {

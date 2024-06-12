@@ -1,12 +1,12 @@
-package com.helloWorld.helloWorld.service.impl;
+package com.helloWorld.helloWorld.services.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.helloWorld.helloWorld.entity.User;
-import com.helloWorld.helloWorld.mapper.UserMapper;
-import com.helloWorld.helloWorld.service.UserService;
+import com.helloWorld.helloWorld.entities.User;
+import com.helloWorld.helloWorld.mappers.UserMapper;
+import com.helloWorld.helloWorld.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -32,8 +32,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if ( null != userExist ) {
             return "Username already exists";
         }
-//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(SecurityConstant.PASSWORD_STRENGTH);
-//        user.setPassword(encoder.encode(user.getPassword()));
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(9);
+        user.setPassword(encoder.encode(user.getPassword()));
         user.setCreatedTime(LocalDateTime.now());
         baseMapper.insert(user);
         return "Registration Successful";

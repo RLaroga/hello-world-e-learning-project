@@ -1,7 +1,7 @@
-package com.helloWorld.helloWorld.service;
+package com.helloWorld.helloWorld.services;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.helloWorld.helloWorld.entity.User;
+import com.helloWorld.helloWorld.entities.User;
 
 import java.util.List;
 
