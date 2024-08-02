@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.responses;
+package com.helloWorld.helloWorld.response;
 
 import com.helloWorld.helloWorld.common.utils.StringUtils;
 import com.helloWorld.helloWorld.common.constant.HttpStatus;

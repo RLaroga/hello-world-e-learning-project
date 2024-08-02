@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.requests;
+package com.helloWorld.helloWorld.request;
 
 import lombok.Getter;
 import lombok.Setter;

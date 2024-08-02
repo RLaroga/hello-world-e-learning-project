@@ -1,7 +1,7 @@
-package com.helloWorld.helloWorld.controllers;
+package com.helloWorld.helloWorld.controller;
 
-import com.helloWorld.helloWorld.requests.RequestLogin;
-import com.helloWorld.helloWorld.responses.ResponseBase;
+import com.helloWorld.helloWorld.request.RequestLogin;
+import com.helloWorld.helloWorld.response.ResponseBase;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
