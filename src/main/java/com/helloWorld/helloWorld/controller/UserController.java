@@ -1,6 +1,7 @@
 package com.helloWorld.helloWorld.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.helloWorld.helloWorld.common.annotation.IgnoreToken;
 import com.helloWorld.helloWorld.entity.User;
 import com.helloWorld.helloWorld.response.ResponseBase;
 import com.helloWorld.helloWorld.service.UserService;
@@ -19,6 +20,7 @@ public class UserController {
 
     private final UserService userService;
 
+    @IgnoreToken
     @GetMapping("/list")
     public ResponseBase<List<User>> list() {
         System.out.println("Before mapper! ");

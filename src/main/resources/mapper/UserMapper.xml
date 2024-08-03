@@ -31,7 +31,7 @@
         <include refid="selectUserVo"/>
     </select>
 
-    <select id="findByUsername" resultType="com.helloWorld.helloWorld.entity.User">
+    <select id="findByUsername" resultMap="UserResult">
         <include refid="selectUserVo"/>
         <where>
             <if test="username != null and username != ''">
