@@ -3,32 +3,35 @@ package com.helloWorld.helloWorld.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
 
     @TableId(type = IdType.AUTO)
-    private Long id;
+    Long id;
 
-    private String firstName;
+    String firstName;
 
-    private String lastName;
+    String lastName;
 
-    private String username;
+    String username;
 
-    private String password;
+    String password;
 
-    private Integer courseLevel;
+    Integer courseLevel;
 
-    private Integer quizLevel;
+    Integer quizLevel;
 
-    private LocalDateTime createdTime;
+    LocalDateTime createdTime;
 
-    private LocalDateTime updatedTime;
+    LocalDateTime updatedTime;
 
 }
