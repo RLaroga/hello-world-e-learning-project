@@ -3,6 +3,7 @@ package com.helloWorld.helloWorld.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.helloWorld.helloWorld.entity.User;
 import com.helloWorld.helloWorld.mapper.UserMapper;
+import com.helloWorld.helloWorld.request.RequestLogin;
 import com.helloWorld.helloWorld.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,18 +29,36 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public String saveUser(User user) {
-        User userExist = this.getUserByUsername( user.getUsername());
-        if ( null != userExist ) {
+        User userExist = this.getUserByUsername(user.getUsername());
+        if (null != userExist) {
             return "Username already exists";
         }
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(9);
+        BCryptPasswordEncoder encoder = getDefaultPasswordEncoder();
         user.setPassword(encoder.encode(user.getPassword()));
         user.setCreatedTime(LocalDateTime.now());
         baseMapper.insert(user);
         return "Registration Successful";
     }
 
-    public User getUserByUsername(String username) {
+    @Override
+    public String logInit(RequestLogin requestLogin) {
+        BCryptPasswordEncoder encoder = getDefaultPasswordEncoder();
+        User user = userMapper.findByUsername(requestLogin.getUsername());
+        boolean isPasswordMatch = encoder.matches(requestLogin.getPassword(), user.getPassword());
+        if (isPasswordMatch) {
+            return "Successfully logged in";
+        } else {
+            return "Incorrect password";
+        }
+    }
+
+    private User getUserByUsername(String username) {
         return userMapper.findByUsername(username);
     }
+
+    private BCryptPasswordEncoder getDefaultPasswordEncoder() {
+        return new BCryptPasswordEncoder(9);
+    }
+
+
 }

@@ -1,5 +1,6 @@
 package com.helloWorld.helloWorld.controller;
 
+import com.helloWorld.helloWorld.common.annotation.IgnoreToken;
 import com.helloWorld.helloWorld.entity.User;
 import com.helloWorld.helloWorld.response.ResponseBase;
 import com.helloWorld.helloWorld.service.UserService;
@@ -16,7 +17,7 @@ public class RegistrationController {
 
     private final UserService userService;
 
-//    @IgnoreToken
+    @IgnoreToken
     @PostMapping("/register")
     public ResponseBase<String> register(@RequestBody User user) {
         return ResponseBase.ok( userService.saveUser(user) );
