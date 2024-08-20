@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.common.utils;
+package com.helloWorld.helloWorld.common.utils.string;
 
 import java.util.Collection;
 

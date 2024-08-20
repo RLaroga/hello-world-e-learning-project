@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/auth")
+@RequestMapping("/api/auth")
 public class LoginController {
 
     private final UserService userService;
 
     @IgnoreToken
-    @PostMapping
+    @PostMapping("/login")
     public ResponseBase<String> login(@RequestBody RequestLogin requestLogin) {
         return ResponseBase.ok(userService.logInit(requestLogin));
     }
