@@ -1,8 +1,8 @@
-package com.helloWorld.helloWorld.mainStudy.aspect;
+package com.helloWorld.helloWorld.aspect;
 
-import com.helloWorld.helloWorld.mainStudy.aspect.config.ProjectConfig;
-import com.helloWorld.helloWorld.mainStudy.aspect.dto.Comment;
-import com.helloWorld.helloWorld.mainStudy.aspect.service.CommentService;
+import com.helloWorld.helloWorld.aspect.config.ProjectConfig;
+import com.helloWorld.helloWorld.aspect.dto.Comment;
+import com.helloWorld.helloWorld.aspect.service.CommentService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

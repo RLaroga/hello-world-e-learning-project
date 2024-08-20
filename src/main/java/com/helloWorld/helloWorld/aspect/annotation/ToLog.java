@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.mainStudy.aspect.annotation;
+package com.helloWorld.helloWorld.aspect.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

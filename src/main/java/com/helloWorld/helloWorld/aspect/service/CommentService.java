@@ -1,7 +1,7 @@
-package com.helloWorld.helloWorld.mainStudy.aspect.service;
+package com.helloWorld.helloWorld.aspect.service;
 
-import com.helloWorld.helloWorld.mainStudy.aspect.annotation.ToLog;
-import com.helloWorld.helloWorld.mainStudy.aspect.dto.Comment;
+import com.helloWorld.helloWorld.aspect.annotation.ToLog;
+import com.helloWorld.helloWorld.aspect.dto.Comment;
 import org.springframework.stereotype.Service;
 
 import java.util.logging.Logger;

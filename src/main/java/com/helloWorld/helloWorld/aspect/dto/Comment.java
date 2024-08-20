@@ -1,4 +1,4 @@
-package com.helloWorld.helloWorld.mainStudy.aspect.dto;
+package com.helloWorld.helloWorld.aspect.dto;
 
 import lombok.Getter;
 import lombok.Setter;
